@@ -223,8 +223,8 @@ def add_pokemon_to_owner(owner_node):
         print("Pokemon already in the list. No changes made.")
         return
     owner_node["pokedex"].append(get_poke_dict_by_id(pok_id))
-    print(f"Pokemon {owner_node["pokedex"][-1]["Name"]} (ID {owner_node["pokedex"][-1]["ID"]})"
-          f" added to {owner_node["name"]}'s Pokedex.")
+    print(f"Pokemon {owner_node['pokedex'][-1]['Name']} (ID {owner_node['pokedex'][-1]['ID']})"
+          f" added to {owner_node['name']}'s Pokedex.")
 
 
 # a function to release a pokemon
@@ -254,7 +254,7 @@ def evolve_pokemon_by_name(owner_node):
             owner_node['pokedex'].pop(i)
             # if the evolved pokemon is already in the list
             if contains(owner_node["pokedex"], new_pok):
-                print(f'{new_pok['Name']} was already present; releasing it immediately.')
+                print(f"{new_pok['Name']} was already present; releasing it immediately.")
             else:
                 owner_node["pokedex"].append(new_pok)
             return
@@ -289,7 +289,7 @@ def display_owners_by_num_pokemon():
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     print("=== The Owners we have, sorted by number of Pokemons ===")
     for i in range(len(arr)):
-        print(f"Owner: {arr[i]["name"]} (has {len(arr[i]["pokedex"])} Pokemon)")
+        print(f"Owner: {arr[i]['name']} (has {len(arr[i]['pokedex'])} Pokemon)")
 
 
 ########################
