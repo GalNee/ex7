@@ -258,7 +258,7 @@ def evolve_pokemon_by_name(owner_node):
             else:
                 owner_node["pokedex"].append(new_pok)
             return
-    print(f"No Pokemon named '{name}' in {owner_node['name']}'s Pokedex")
+    print(f"No Pokemon named '{name}' in {owner_node['name']}'s Pokedex.")
 
 
 ########################
